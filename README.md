@@ -1,5 +1,6 @@
-# eof
- EOF decomposition for oceanic data
+# Empirical Orthogonal Function Toolbox
+
+ EOF decomposition for oceanic/atmospheric data
 
 ## Author
 
@@ -13,6 +14,9 @@ College of Earth, Ocean and Environment, University of Delaware
 
 ## Functions
 
-o_eof : Emperical Orthogonal Functions (Principle Component Analysis)
+eof : Emperical Orthogonal Functions (Principle Component Analysis)
 
-o_teof: Trend EOF.
+meof: Multivariable EOF.
+
+More EOF functions like Trend-EOF will be added in the future.
+
