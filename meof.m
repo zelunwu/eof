@@ -50,7 +50,7 @@ if nargin>2
         end
     end
     
-    if nargin > 3 & ismatrix(varargin{1}) & ismatrix(varargin{2})
+    if nargin > 3 & ismatrix(varargin{1}) & ismatrix(varargin{2}) & length(varargin{1}) == N_lat1 & length(varargin{2}) == N_lat2
         lat1 = varargin{1}; 
         assert(isempty(find(lat1>90|lat1<-90)),'Latitude should be at the range of [-90,90]');
         lat2 = varargin{2};
