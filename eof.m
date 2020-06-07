@@ -37,13 +37,13 @@ flag_std = 0;
 if nargin>1
     % Specified n_eof
     for i = 1:length(varargin)
-        if isscalar(varargin{i})
+        if isscalar(varargin{i})& (~isstr(varargin{1}))
             n_eof = varargin{i};
             assert(n_eof<=min([N_loc, N_time]),'Input error: n_eof cannot exceed the number of location points and the numbers of timesteps of data');
         end
     end
 
-    if ismatrix(varargin{1})
+    if ismatrix(varargin{1})& (~isstr(varargin{1}))
         lat = varargin{1}; 
         assert(isempty(find(lat>90|lat<-90)),'Latitude should be at the range of [-90,90]');
         % weighted with latitude
@@ -58,6 +58,7 @@ if nargin>1
         flag_std = 1;
 	end
 end
+
 
 %%
 [data_2d, in_nonan_locations] = reshape3dto2d(data);
