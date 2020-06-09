@@ -25,7 +25,8 @@ function [L, Y, eig_values, expvar] = eofcore(X, n_eof)
 %     15th May, 2020
 
 %% 
-X = X - mean(X,2); % Remove mean in time dimension
+% X = X - mean(X,2); % Remove mean in time dimension
+X = X - repmat(mean(X,2),[1,size(X,2)]);% Remove mean in time dimension
 [N_locations, N_timesteps] = size(X);
 
 if N_locations < N_timesteps
