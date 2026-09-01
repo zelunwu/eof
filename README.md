@@ -1,5 +1,7 @@
 # Empirical Orthogonal Function Toolbox
 
+Updated a version on a whim.
+
 EOF / MEOF (combined EOF) for oceanic and atmospheric fields, with **spatial
 area weighting** and matching implementations in **MATLAB**, **Python**, and
 **C++**.
